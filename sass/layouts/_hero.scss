@@ -1,0 +1,29 @@
+.hero-section {
+  @include section(200px);
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--main-color-background);
+  background-image: linear-gradient(
+      var(--background-overlay),
+      var(--background-overlay)
+    ),
+    url(../images/index/background-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.title {
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  color: var(--white-color);
+  width: 696px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: calc(60 / 44);
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+}

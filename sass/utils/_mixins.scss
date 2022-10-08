@@ -1,0 +1,30 @@
+@import "./decimals";
+
+@mixin section($padding: 94px) {
+  padding-top: $padding;
+  padding-bottom: $padding;
+}
+
+@mixin fonts($fw: 400, $fs: 14px, $lh: 16px, $ls: 0.03em) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: decimal-round($lh / $fs);
+  letter-spacing: $ls;
+}
+
+@mixin card-set($indent) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: $indent;
+}
+
+@mixin card-set-item($indent, $items) {
+  flex-basis: calc((100% - $indent * $items - 1)) / $items;
+}
+
+@mixin section($padding: 94px) {
+  padding-top: $padding;
+  padding-bottom: $padding;
+}

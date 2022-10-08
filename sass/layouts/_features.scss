@@ -1,0 +1,42 @@
+.features {
+  @include section;
+}
+
+.features__list {
+  display: flex;
+  justify-content: center;
+}
+
+.features__item {
+  /*   flex-basis: calc((100% - 3 * 30px) / 4); */
+  @include card-set-item($indent: 30px, $items: 4);
+}
+
+.features__item + .features__item {
+  margin-left: 30px;
+}
+
+.features__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  background-color: var(--grey-background-color);
+  width: 270px;
+  height: 120px;
+}
+
+.features__subtitle {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.features__description {
+  color: var(--secondary-color-font);
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+}

@@ -1,0 +1,38 @@
+.what-we-do {
+  @include section;
+  padding-top: 0;
+}
+
+.what-we-do__list {
+  display: flex;
+  justify-content: center;
+}
+
+.thumb-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.thumb-img + .thumb-img {
+  margin-left: 30px;
+}
+
+.overlay__descr {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 370px;
+  height: 70px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--white-color);
+  background-color: var(--overlay-img);
+}

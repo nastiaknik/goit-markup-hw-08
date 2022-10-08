@@ -1,0 +1,44 @@
+.footer {
+  @include section(60px);
+  background-color: var(--main-color-background);
+}
+
+.footer__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.address__list-item + .address__list-item {
+  margin-top: 9px;
+}
+
+.footer__address-link {
+  font-style: normal;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.02em;
+  transition: color var(--animation);
+  color: var(--white-color);
+
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+
+.footer__contact-link {
+  color: var(--grey-txt-color-60);
+}
+
+.join {
+  margin-left: 70px;
+}
+.join__text {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
+}

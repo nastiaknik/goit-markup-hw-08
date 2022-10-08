@@ -1,0 +1,24 @@
+.logo {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: 93px;
+  color: var(--black-color);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: calc(31 / 26);
+  letter-spacing: 0.03em;
+  font-family: var(--logo-font);
+}
+.logo--wrap {
+  color: var(--accent-color);
+}
+
+.footer__logo {
+  margin-bottom: 20px;
+  margin-right: 0;
+  padding: 0;
+}
+.footer__logo--wrap {
+  color: var(--white-color);
+}

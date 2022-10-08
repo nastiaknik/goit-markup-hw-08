@@ -1,0 +1,19 @@
+.header {
+  border-bottom: 1px solid var(--grey-stroke-color);
+}
+.header__container {
+  display: flex;
+}
+
+.header__list-item + .header__list-item {
+  margin-left: 50px;
+}
+
+.header__icon {
+  fill: var(--secondary-color-font);
+
+  .nav__contact-link:hover &,
+  .nav__contact-link:focus & {
+    fill: currentColor;
+  }
+}

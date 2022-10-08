@@ -1,0 +1,42 @@
+:root {
+  /* fonts */
+  --main-font: "Roboto", sans-serif;
+  --logo-font: "Raleway", sans-serif;
+
+  /* text styles */
+  --main-font-size: 14px;
+  --secondary-font-size: 16px;
+  --main-color-font: #212121;
+  --secondary-color-font: #757575;
+
+  /* colors */
+  --accent-color: #2196f3;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --grey-stroke-color: #ececec;
+  --btn-active-color: #188ce8;
+  --grey-icon-color: #afb1b8;
+  --grey-bg-icon: rgba(255, 255, 255, 0.1);
+  --grey-txt-color-60: rgba(255, 255, 255, 0.6);
+  --projects-cards-color: #eeeeee;
+
+  /* background */
+  --overlay-img: rgba(47, 48, 58, 0.8);
+  --main-color-background: #2f303a;
+  --background-overlay: rgba(47, 48, 58, 0.4);
+  --grey-background-color: #f5f4fa;
+  --hero-background-image: rgba(47, 48, 58, 0.4);
+  --backdrop-bg-color: rgba(0, 0, 0, 0.2);
+  --accent-bg: rgba(33, 150, 243, 0.9);
+
+  /* shadow */
+  --team-card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --modal-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --distribution-btn-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  /* other */
+  --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --form-border: 1px solid rgba(33, 33, 33, 0.2);
+}
