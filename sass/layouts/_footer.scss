@@ -7,15 +7,6 @@
   }
 }
 
-.footer__container {
-  @media screen and (min-width: $tablet) {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    justify-content: center;
-  }
-}
-
 .address__list-item:not(:last-child) {
   margin-bottom: 8px;
   @media screen and (min-width: $desktop) {
@@ -53,6 +44,7 @@
 .footer-flex {
   @media screen and (min-width: $desktop) {
     display: flex;
+    justify-content: baseline;
   }
 }
 .footer-flex--tablet {
@@ -60,7 +52,7 @@
   @media screen and (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
-    vertical-align: baseline;
+    align-items: baseline;
   }
   @media screen and (min-width: $desktop) {
     margin-bottom: 0px;
