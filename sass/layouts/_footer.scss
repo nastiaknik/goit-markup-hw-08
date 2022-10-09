@@ -53,6 +53,8 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    padding-right: 89px;
+    padding-left: 76px;
   }
   @media screen and (min-width: $desktop) {
     margin-bottom: 0px;

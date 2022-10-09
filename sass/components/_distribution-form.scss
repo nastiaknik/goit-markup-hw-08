@@ -100,20 +100,31 @@
   display: block;
   transition: transform var(--animation);
   transform-origin: center;
+
   @media screen and (max-width: calc($tablet - 1px)) {
-    transform: translate(0px);
+    transform: translate(0);
     .distribution-form__input:focus + &,
     .distribution-form__input:not(:placeholder-shown) + & {
       transform: translate(-25%, -175%);
       color: var(--white-color);
     }
   }
+
   @media screen and (min-width: $tablet) {
-    transform: translateX(0);
+    transform: translate(150px);
     .distribution-form__input:focus + &,
     .distribution-form__input:not(:placeholder-shown) + & {
-      transform: translateX(-150%);
+      transform: translateX(70px);
       color: var(--white-color);
+    }
+
+    @media screen and (min-width: $desktop) {
+      transform: translateX(0);
+      .distribution-form__input:focus + &,
+      .distribution-form__input:not(:placeholder-shown) + & {
+        transform: translateX(-150%);
+        color: var(--white-color);
+      }
     }
   }
 }
