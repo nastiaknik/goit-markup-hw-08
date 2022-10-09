@@ -1,17 +1,33 @@
-.nav,
+.nav {
+  display: none;
+  @media screen and (min-width: $tablet) {
+    @include flex(null, center);
+  }
+}
 .nav__list {
   display: flex;
-  justify-content: center;
+  margin-left: 88px;
+  @media screen and (min-width: $desktop) {
+    margin-left: 93px;
+  }
 }
 
-.main-nav {
-  display: block;
-  @include section(32px);
+.header__list-item {
   font-weight: 500;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   position: relative;
   transition: color var(--animation);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.main-nav {
+  position: relative;
+  padding: 32px 0;
 
   &::after {
     position: absolute;
@@ -25,11 +41,6 @@
     display: none;
     /*   transition: transform var(--animation)  */
   }
-
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
-  }
 }
 .main-nav--current.main-nav::after {
   display: block;
@@ -39,33 +50,57 @@
 }
 
 .nav__contact-list {
-  display: flex;
-  margin-left: auto;
-  align-items: center;
-  justify-content: center;
+  display: none;
   gap: 30px;
+  @media screen and (min-width: $tablet) {
+    display: block;
+    margin-left: auto;
+  }
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .nav__list-item {
   display: flex;
   min-width: 161px;
   min-height: 16px;
+  @media screen and (min-width: $tablet) {
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 .nav__contact-link {
   display: flex;
   align-items: center;
-  gap: 10px;
   width: 100%;
   height: 100%;
   color: var(--secondary-color-font);
   font-weight: 500;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  /*   @include section(21px); */
   transition: color var(--animation);
 
   &:focus,
   &:hover {
     color: var(--accent-color);
+  }
+
+  &:not(:last-child) {
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 10px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-right: 30px;
+      margin-bottom: 0px;
+    }
   }
 }

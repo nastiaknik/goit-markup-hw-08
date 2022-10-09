@@ -2,14 +2,24 @@
   margin-left: auto;
 }
 
+.distributoion-form {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    gap: 12px;
+  }
+}
+
 .distribution-form__field {
   position: relative;
   display: block;
-  margin-right: 12px;
+  @media screen and (min-width: $desktop) {
+    margin-right: 12px;
+  }
 }
 
 .distribution-form__title {
   display: block;
+  @include font(20px, 700, 1.5, 0.03em);
 }
 
 .distribution-form__input,
@@ -20,10 +30,23 @@
 }
 
 .distribution-form__input {
+  height: 50px;
+  margin-bottom: 20px;
+  width: 100%;
+  @media screen and (min-width: $tablet) {
+    width: 450px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0px;
+    width: 358px;
+  }
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   color: var(--white-color);
   background-color: transparent;
-  width: 358px;
-  height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   padding: 15px 16px;
@@ -50,9 +73,13 @@
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center;
   box-shadow: var(--distribution-btn-shadow);
   overflow: hidden;
+  @media screen and (min-width: $tablet) {
+  }
+  @media screen and (min-width: $desktop) {
+    @include flex(center, center);
+  }
 }
 
 .distribution__icon {
@@ -70,18 +97,29 @@
   position: absolute;
   top: 15px;
   left: 16px;
-  transform: translateX(0);
   display: block;
   transition: transform var(--animation);
   transform-origin: center;
-
-  .distribution-form__input:focus + &,
-  .distribution-form__input:not(:placeholder-shown) + & {
-    transform: translateX(-150%);
-    color: var(--white-color);
+  @media screen and (max-width: calc($tablet - 1px)) {
+    transform: translate(0px);
+    .distribution-form__input:focus + &,
+    .distribution-form__input:not(:placeholder-shown) + & {
+      transform: translate(-25%, -175%);
+      color: var(--white-color);
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    transform: translateX(0);
+    .distribution-form__input:focus + &,
+    .distribution-form__input:not(:placeholder-shown) + & {
+      transform: translateX(-150%);
+      color: var(--white-color);
+    }
   }
 }
 
 .distribution-group {
-  display: flex;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
 }

@@ -1,17 +1,78 @@
 .hero-section {
-  @include section(200px);
+  @include section(118px);
   max-width: 1600px;
+  min-width: 320px;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--main-color-background);
-  background-image: linear-gradient(
-      var(--background-overlay),
-      var(--background-overlay)
-    ),
-    url(../images/index/background-img.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+  @media screen and (min-width: $desktop) {
+    @include section(200px);
+    background-image: linear-gradient(
+        to right,
+        var(--background-overlay),
+        var(--background-overlay)
+      ),
+      url("../images/hero/bg-mob-@1x.jpg");
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        var(--background-overlay),
+        var(--background-overlay)
+      ),
+      url("../images/hero/bg-mob-@2x.jpg");
+  }
+
+  @media screen and (min-width: ($mobile + 1px)),
+    screen and (min-width: $tablet),
+    screen and (min-width: $tablet) {
+    background-image: linear-gradient(
+        to right,
+        var(--background-overlay),
+        var(--background-overlay)
+      ),
+      url("../images/hero/bg-tb-@1x.jpg");
+  }
+
+  @media screen and (min-width: ($mobile + 1px)) and (min-device-pixel-ratio: 2),
+    screen and (min-width: $tablet) and (min-resolution: 192dpi),
+    screen and (min-width: $tablet) and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        var(--background-overlay),
+        var(--background-overlay)
+      ),
+      url("../images/hero/bg-tb-@2x.jpg");
+  }
+
+  @media screen and (min-width: ($tablet + 1px)),
+    screen and (min-width: ($tablet + 1px)),
+    screen and (min-width: ($tablet + 1px)) {
+    background-image: linear-gradient(
+        to right,
+        var(--background-overlay),
+        var(--background-overlay)
+      ),
+      url("../images/hero/bg-ds-@1x.jpg");
+  }
+
+  @media screen and (min-width: ($tablet + 1px)) and (min-device-pixel-ratio: 2),
+    screen and (min-width: ($tablet + 1px)) and (min-resolution: 192dpi),
+    screen and (min-width: ($tablet + 1px)) and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        var(--background-overlay),
+        var(--background-overlay)
+      ),
+      url("../images/hero/bg-ds-@2x.jpg");
+  }
 }
 
 .title {
@@ -19,11 +80,13 @@
   margin-right: auto;
   margin-left: auto;
   color: var(--white-color);
-  width: 696px;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: calc(60 / 44);
-  letter-spacing: 0.06em;
   text-align: center;
   text-transform: uppercase;
+  max-width: 360px;
+  @include font(26px, 900, 1.62, 0.06em);
+
+  @media screen and (min-width: $desktop) {
+    @include font(44px, 900, 1.36, 0.06em);
+    max-width: 696px;
+  }
 }

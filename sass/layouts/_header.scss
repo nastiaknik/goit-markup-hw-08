@@ -3,6 +3,10 @@
 }
 .header__container {
   display: flex;
+  @include flex(null, center);
+  @media screen and (max-width: ($tablet - 1px)) {
+    padding-right: 23px;
+  }
 }
 
 .header__list-item + .header__list-item {
@@ -11,6 +15,14 @@
 
 .header__icon {
   fill: var(--secondary-color-font);
+
+  @media screen and (min-width: $tablet) {
+    margin-right: 8px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 10px;
+  }
 
   .nav__contact-link:hover &,
   .nav__contact-link:focus & {

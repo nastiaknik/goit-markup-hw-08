@@ -1,18 +1,27 @@
 .footer {
   @include section(60px);
   background-color: var(--main-color-background);
+  text-align: center;
+  @media screen and (min-width: $desktop) {
+    text-align: left;
+  }
 }
 
 .footer__container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+  }
 }
 
-.address__list-item + .address__list-item {
-  margin-top: 9px;
+.address__list-item:not(:last-child) {
+  margin-bottom: 8px;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 9px;
+  }
 }
-
 .footer__address-link {
   font-style: normal;
   line-height: calc(24 / 14);
@@ -30,9 +39,6 @@
   color: var(--grey-txt-color-60);
 }
 
-.join {
-  margin-left: 70px;
-}
 .join__text {
   margin-bottom: 20px;
   font-weight: 700;
@@ -41,4 +47,37 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white-color);
+}
+
+/*  */
+.footer-flex {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
+}
+.footer-flex--tablet {
+  margin-bottom: 60px;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: baseline;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 0px;
+    margin-right: 70px;
+  }
+}
+.footer-flex__item {
+  /*   @media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    @include card-set-item(10px, 2);
+  } */
+  &:first-child {
+    margin-bottom: 60px;
+  }
+  &:first-child {
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 0px;
+      margin-right: 70px;
+    }
+  }
 }

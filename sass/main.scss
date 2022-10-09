@@ -6,9 +6,15 @@
 
 @import "../sass/utils/_variables.scss";
 
+@import "../sass/utils/breakpoints";
+
 @import "../sass/utils/mixins";
 
 @import "../sass/utils/placeholders";
+
+@import "../sass/base/container";
+
+@import "../sass/components/mob-menu";
 
 @import "../sass/components/logo";
 
@@ -25,8 +31,6 @@
 @import "../sass/components/modal";
 
 @import "../sass/components/register-form";
-
-@import "../sass/base/card-set";
 
 @import "../sass/layouts/features";
 

@@ -26,13 +26,20 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 528px;
-  height: 581px;
   background-color: var(--white-color);
   box-shadow: var(--modal-shadow);
   border-radius: 4px;
   transition: transform var(--animation);
   padding: 40px;
+
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+    height: 609px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__btn {

@@ -1,29 +1,71 @@
 .features {
   @include section;
+
+  @media screen and (min-width: $desktop) {
+    @include section(94px);
+  }
+
+  .section__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    text-align: center;
+    @media screen and (min-width: $tablet) {
+      text-align: left;
+    }
+  }
 }
 
 .features__list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--gap);
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--gap);
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+  }
 }
 
 .features__item {
-  /*   flex-basis: calc((100% - 3 * 30px) / 4); */
-  @include card-set-item($indent: 30px, $items: 4);
-}
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    @include card-set-item(var(--gap), 2);
+    width: 354px;
+  }
 
-.features__item + .features__item {
-  margin-left: 30px;
+  @media screen and (max-width: ($tablet - 1px)) {
+    &:not(:last-child) {
+      margin-bottom: var(--gap);
+    }
+  }
+  /*   @media screen and (min-width: $desktop) {
+    @include card-set-item(var(--gap), 4);
+  } */
 }
 
 .features__icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
+  margin: 0 auto 30px;
   background-color: var(--grey-background-color);
-  width: 270px;
   height: 120px;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: $tablet) {
+    width: 354px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 270px;
+  }
 }
 
 .features__subtitle {

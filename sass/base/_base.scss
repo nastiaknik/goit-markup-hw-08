@@ -1,3 +1,5 @@
+@import "../utils/mixins";
+@import "../utils/breakpoints";
 .page {
   color: var(--main-color-font);
   background-color: var(--white-color);
@@ -6,10 +8,12 @@
 }
 
 .section__title {
-  margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: calc(42 / 36);
-  letter-spacing: 0.03em;
+  margin-bottom: 30px;
   text-align: center;
+  @include font(28px, 700);
+
+  @media screen and (min-width: $desktop) {
+    @include font(36px, 700);
+    margin-bottom: 50px;
+  }
 }

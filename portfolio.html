@@ -51,10 +51,10 @@
   <body class="page">
     <header class="header">
       <div class="container header__container">
+        <a class="logo link" href="./index.html" lang="en"
+          ><span class="logo--wrap">Web</span>Studio</a
+        >
         <nav class="nav">
-          <a class="logo link" href="./index.html" lang="en"
-            ><span class="logo--wrap">Web</span>Studio</a
-          >
           <ul class="nav__list list">
             <li class="header__list-item">
               <a class="link main-nav" href="./index.html">Студія</a>
@@ -86,39 +86,145 @@
             >
           </li>
         </ul>
+
+        <button class="menu-open-btn" type="button">
+          <svg
+            class="menu-open-icon"
+            width="24"
+            height="16"
+            aria-label="Мобільнe меню"
+          >
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
+      <!-- Мобільне меню -->
+
+      <div class="mob-menu is-hidden">
+        <div class="container">
+          <button class="menu-close-btn" type="button">
+            <svg class="menu-close-icon" width="19" height="19">
+              <use href="./images/icons.svg#icon-close-mob-menu"></use>
+            </svg>
+          </button>
+          <ul class="mob-menu__list list">
+            <li class="mob-menu__item">
+              <a class="mob-menu__link link" href="./">Студія</a>
+            </li>
+            <li class="mob-menu__item">
+              <a
+                class="mob-menu__link mob-menu__link--current link"
+                href="./portfolio.html"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="mob-menu__item">
+              <a class="mob-menu__link link" href="">Контакти</a>
+            </li>
+          </ul>
+
+          <div class="mob-menu-bottom">
+            <ul class="mob-contacts__list list">
+              <li class="mob-contacts__item">
+                <a
+                  class="mob-contacts__link link mob-contacts__link--big"
+                  href="tel:+380961111111"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li class="mob-contacts__item">
+                <a
+                  class="mob-contacts__link link"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mob-socials__list list">
+              <li class="mob-socials__item">
+                <a class="mob-socials__link link" href="">Instagram </a>
+              </li>
+              <li class="mob-socials__item">
+                <a class="mob-socials__link link" href="">Twitter</a>
+              </li>
+              <li class="mob-socials__item">
+                <a class="mob-socials__link link" href="">Facebook</a>
+              </li>
+              <li class="mob-socials__item">
+                <a class="mob-socials__link link" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--  -->
     </header>
     <main>
       <section class="projects">
         <div class="container">
           <h1 class="visually-hidden">Наші проєкти</h1>
-          <ul class="list btn-list">
-            <li class="list-item projects__item">
-              <button class="projects__btn" type="button">Все</button>
+          <ul class="list btn-list filter">
+            <li class="list-item projects__item filter__item">
+              <button class="projects__btn filter__btn" type="button">
+                Все
+              </button>
             </li>
-            <li class="list-item projects__item">
-              <button class="projects__btn" type="button">Веб-сайти</button>
+            <li class="list-item projects__item filter__item">
+              <button class="projects__btn filter__btn" type="button">
+                Веб-сайти
+              </button>
             </li>
-            <li class="list-item projects__item">
-              <button class="projects__btn" type="button">Додатки</button>
+            <li class="list-item projects__item filter__item">
+              <button class="projects__btn filter__btn" type="button">
+                Додатки
+              </button>
             </li>
-            <li class="list-item projects__item">
-              <button class="projects__btn" type="button">Дизайн</button>
+            <li class="list-item projects__item filter__item">
+              <button class="projects__btn filter__btn" type="button">
+                Дизайн
+              </button>
             </li>
-            <li class="list-item projects__item">
-              <button class="projects__btn" type="button">Маркетинг</button>
+            <li class="list-item projects__item filter__item">
+              <button class="projects__btn filter__btn" type="button">
+                Маркетинг
+              </button>
             </li>
           </ul>
           <ul class="list card-set">
             <li class="project__card">
               <a href="#" class="project__link link"
                 ><div class="thumb">
-                  <img
-                    src="./images/portfolio/website-techno.jpg"
-                    alt="Веб-сайт Технокряк"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/pf1-mb-@1x.jpg 450w,
+                        ./images/portfolio/pf1-mb-@2x.jpg 900w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(max-width: 767px) 450px, 100vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf1-ds-@1x.jpg 370w,
+                        ./images/portfolio/pf1-ds-@2x.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 100vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf1-tb-@1x.jpg 354w,
+                        ./images/portfolio/pf1-tb-@2x.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 354px, 100vw"
+                    />
+                    <img
+                      class="examples__img"
+                      src="./images/portfolio/pf1-ds-@1x.jpg"
+                      alt="Веб-сайт Технокряк"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -137,12 +243,37 @@
             <li class="project__card">
               <a href="#" class="project__link link"
                 ><div class="thumb">
-                  <img
-                    src="./images/portfolio/poster.jpg"
-                    alt="Постер з двома баскетболістами"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/pf2-mb-@1x.jpg 450w,
+                        ./images/portfolio/pf2-mb-@2x.jpg 900w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(max-width: 767px) 450px, 100vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf2-ds-@1x.jpg 370w,
+                        ./images/portfolio/pf2-ds-@2x.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 100vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf2-tb-@1x.jpg 354w,
+                        ./images/portfolio/pf2-tb-@2x.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 354px, 100vw"
+                    />
+                    <img
+                      class="examples__img"
+                      src="./images/portfolio/pf2-ds-@1x.jpg"
+                      alt="Постер з двома баскетболістами"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -163,12 +294,37 @@
             <li class="project__card">
               <a href="#" class="project__link link"
                 ><div class="thumb">
-                  <img
-                    src="./images/portfolio/logo-restaurant.jpg"
-                    alt="Лого ресторану з  рибою"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/pf3-mb-@1x.jpg 450w,
+                        ./images/portfolio/pf3-mb-@2x.jpg 900w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(max-width: 767px) 450px, 100vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf3-ds-@1x.jpg 370w,
+                        ./images/portfolio/pf3-ds-@2x.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 100vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf3-tb-@1x.jpg 354w,
+                        ./images/portfolio/pf3-tb-@2x.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 354px, 100vw"
+                    />
+                    <img
+                      class="examples__img"
+                      src="./images/portfolio/pf3-ds-@1x.jpg"
+                      alt="Лого ресторану з  рибою"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -187,12 +343,38 @@
             <li class="project__card">
               <a href="#" class="project__link link"
                 ><div class="thumb">
-                  <img
-                    src="./images/portfolio/project-prime.jpg"
-                    alt="Навушники"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/pf4-mb-@1x.jpg 450w,
+                        ./images/portfolio/pf4-mb-@2x.jpg 900w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(max-width: 767px) 450px, 100vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf4-ds-@1x.jpg 370w,
+                        ./images/portfolio/pf4-ds-@2x.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 100vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf4-tb-@1x.jpg 354w,
+                        ./images/portfolio/pf4-tb-@2x.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 354px, 100vw"
+                    />
+                    <img
+                      class="examples__img"
+                      src="./images/portfolio/pf4-ds-@1x.jpg"
+                      alt="Навушники"
+                    />
+                  </picture>
+
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -211,12 +393,37 @@
             <li class="project__card">
               <a href="#" class="project__link link"
                 ><div class="thumb">
-                  <img
-                    src="./images/portfolio/project-boxes.jpg"
-                    alt="Дві коробки"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/pf5-mb-@1x.jpg 450w,
+                        ./images/portfolio/pf5-mb-@2x.jpg 900w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(max-width: 767px) 450px, 100vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf5-ds-@1x.jpg 370w,
+                        ./images/portfolio/pf5-ds-@2x.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 100vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf5-tb-@1x.jpg 354w,
+                        ./images/portfolio/pf5-tb-@2x.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 354px, 100vw"
+                    />
+                    <img
+                      class="examples__img"
+                      src="./images/portfolio/pf5-ds-@1x.jpg"
+                      alt="Дві коробки"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -235,12 +442,33 @@
             <li class="project__card">
               <a href="#" class="project__link link"
                 ><div class="thumb">
-                  <img
-                    src="./images/portfolio/website-inspiration.jpg"
-                    alt="Веб-сайт Inspiration has no Borders"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/pf6-mb-@1x.jpg 450w,
+                        ./images/portfolio/pf6-mb-@2x.jpg 900w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(max-width: 767px) 450px, 100vw" />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf6-ds-@1x.jpg 370w,
+                        ./images/portfolio/pf6-ds-@2x.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 100vw" />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf6-tb-@1x.jpg 354w,
+                        ./images/portfolio/pf6-tb-@2x.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 354px, 100vw" />
+                    <img
+                      class="examples__img"
+                      src="./images/portfolio/pf6-ds-@1x.jpg"
+                      alt="Веб-сайт Inspiration has no Borders"
+                  /></picture>
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -259,12 +487,33 @@
             <li class="project__card">
               <a href="#" class="project__link link"
                 ><div class="thumb">
-                  <img
-                    src="./images/portfolio/magazine.jpg"
-                    alt="Журнал"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/pf7-mb-@1x.jpg 450w,
+                        ./images/portfolio/pf7-mb-@2x.jpg 900w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(max-width: 767px) 450px, 100vw" />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf7-ds-@1x.jpg 370w,
+                        ./images/portfolio/pf7-ds-@2x.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 100vw" />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf7-tb-@1x.jpg 354w,
+                        ./images/portfolio/pf7-tb-@2x.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 354px, 100vw" />
+                    <img
+                      class="examples__img"
+                      src="./images/portfolio/pf7-ds-@1x.jpg"
+                      alt="Журнал"
+                  /></picture>
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -283,12 +532,33 @@
             <li class="project__card">
               <a href="#" class="project__link link"
                 ><div class="thumb">
-                  <img
-                    src="./images/portfolio/label-tag.jpg"
-                    alt="Етикетка"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/pf8-mb-@1x.jpg 450w,
+                        ./images/portfolio/pf8-mb-@2x.jpg 900w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(max-width: 767px) 450px, 100vw" />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf8-ds-@1x.jpg 370w,
+                        ./images/portfolio/pf8-ds-@2x.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 100vw" />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf8-tb-@1x.jpg 354w,
+                        ./images/portfolio/pf8-tb-@2x.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 354px, 100vw" />
+                    <img
+                      class="examples__img"
+                      src="./images/portfolio/pf8-ds-@1x.jpg"
+                      alt="Етикетка"
+                  /></picture>
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -307,12 +577,37 @@
             <li class="project__card">
               <a href="#" class="project__link link"
                 ><div class="thumb">
-                  <img
-                    src="./images/portfolio/growing-business.jpg"
-                    alt="Додаток Growing Business"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/pf9-mb-@1x.jpg 450w,
+                        ./images/portfolio/pf9-mb-@2x.jpg 900w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(max-width: 767px) 450px, 100vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf9-ds-@1x.jpg 370w,
+                        ./images/portfolio/pf9-ds-@2x.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 100vw"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/pf9-tb-@1x.jpg 354w,
+                        ./images/portfolio/pf9-tb-@2x.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="(min-width: 768px) 354px, 100vw"
+                    />
+                    <img
+                      class="examples__img"
+                      src="./images/portfolio/pf9-ds-@1x.jpg"
+                      alt="Додаток Growing Business"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -334,104 +629,110 @@
     </main>
     <footer class="footer">
       <div class="container footer__container">
-        <div>
-          <a class="link logo footer__logo" href="./index.html" lang="en"
-            ><span class="logo--wrap">Web</span
-            ><span class="footer__logo--wrap">Studio</span></a
-          >
-          <address class="footer__address">
-            <ul class="address__list list">
-              <li class="address__list-item list-item">
-                <a
-                  class="link footer__address-link"
-                  href="https://goo.gl/maps/8BweSNwP1uSrpVsL9"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  >м. Київ, пр-т Лесі Українки, 26</a
-                >
-              </li>
-              <li class="address__list-item list-item">
-                <a
-                  class="link footer__address-link footer__contact-link"
-                  href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
-                >
-              </li>
-              <li class="address__list-item list-item">
-                <a
-                  class="link footer__address-link footer__contact-link"
-                  href="tel:+380961111111"
-                  >+38 096 111 11 11</a
-                >
-              </li>
-            </ul>
-          </address>
-        </div>
-        <div class="join">
-          <p class="join__text">Приєднуйтесь</p>
-          <ul class="list social-list">
-            <li class="social-item">
-              <a class="footer__social-link social-link" href="#">
-                <svg class="footer__social-icon" width="20" height="20">
-                  <use href="./images/icons.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-item">
-              <a class="footer__social-link social-link" href="#">
-                <svg class="footer__social-icon" width="20" height="20">
-                  <use href="./images/icons.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-item">
-              <a class="footer__social-link social-link" href="#">
-                <svg class="footer__social-icon" width="20" height="20">
-                  <use href="./images/icons.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="social-item">
-              <a class="footer__social-link social-link" href="#">
-                <svg class="footer__social-icon" width="20" height="20">
-                  <use href="./images/icons.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="distribution-form__container">
-          <strong class="distribution-form__title join__text">
-            Підпишіться на розсилку</strong
-          >
-          <form
-            class="distribution-form"
-            name="distribution-form"
-            autocomplete="off"
-            method="post"
-            action="javascript:void(0);"
-          >
-            <div class="distribution-group">
-              <label class="distribution-form__field">
-                <input
-                  class="distribution-form__input"
-                  type="email"
-                  name="email"
-                  placeholder="example@email.com"
-                  required
-                />
-                <span class="distribution-form__label">Email</span></label
+        <div class="footer-flex">
+          <div class="footer-flex--tablet">
+            <div class="footer-flex__item">
+              <a class="link logo footer__logo" href="./index.html" lang="en"
+                ><span class="logo--wrap">Web</span
+                ><span class="footer__logo--wrap">Studio</span></a
               >
-              <button class="btn distribution__btn" type="submit">
-                Підписатися
-                <svg class="distribution__icon" width="24" height="24">
-                  <use href="./images/icons.svg#paper-airplane"></use>
-                </svg>
-              </button>
+              <address class="footer__address">
+                <ul class="address__list list">
+                  <li class="address__list-item list-item">
+                    <a
+                      class="link footer__address-link"
+                      href="https://goo.gl/maps/8BweSNwP1uSrpVsL9"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      >м. Київ, пр-т Лесі Українки, 26</a
+                    >
+                  </li>
+                  <li class="address__list-item list-item">
+                    <a
+                      class="link footer__address-link footer__contact-link"
+                      href="mailto:info@devstudio.com"
+                      >info@devstudio.com</a
+                    >
+                  </li>
+                  <li class="address__list-item list-item">
+                    <a
+                      class="link footer__address-link footer__contact-link"
+                      href="tel:+380961111111"
+                      >+38 096 111 11 11</a
+                    >
+                  </li>
+                </ul>
+              </address>
             </div>
-          </form>
+
+            <div class="join footer-flex__item">
+              <p class="join__text">Приєднуйтесь</p>
+              <ul class="list social-list">
+                <li class="social-item">
+                  <a class="footer__social-link social-link" href="#">
+                    <svg class="footer__social-icon" width="20" height="20">
+                      <use href="./images/icons.svg#instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a class="footer__social-link social-link" href="#">
+                    <svg class="footer__social-icon" width="20" height="20">
+                      <use href="./images/icons.svg#twitter"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a class="footer__social-link social-link" href="#">
+                    <svg class="footer__social-icon" width="20" height="20">
+                      <use href="./images/icons.svg#facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-item">
+                  <a class="footer__social-link social-link" href="#">
+                    <svg class="footer__social-icon" width="20" height="20">
+                      <use href="./images/icons.svg#linkedin"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="distribution-form__container footer-flex__item">
+            <strong class="distribution-form__title join__text">
+              Підпишіться на розсилку</strong
+            >
+            <form
+              class="distribution-form"
+              name="distribution-form"
+              autocomplete="off"
+              method="post"
+              action="javascript:void(0);"
+            >
+              <div class="distribution-group">
+                <label class="distribution-form__field">
+                  <input
+                    class="distribution-form__input"
+                    type="email"
+                    name="email"
+                    placeholder="example@email.com"
+                    required
+                  />
+                  <span class="distribution-form__label">Email</span></label
+                >
+                <button class="btn distribution__btn" type="submit">
+                  Підписатися
+                  <svg class="distribution__icon" width="24" height="24">
+                    <use href="./images/icons.svg#paper-airplane"></use>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

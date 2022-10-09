@@ -1,11 +1,14 @@
 .what-we-do {
-  @include section;
-  padding-top: 0;
+  display: none;
+  @media screen and (min-width: $desktop) {
+    @include section;
+    padding-top: 0;
+    display: block;
+  }
 }
 
 .what-we-do__list {
-  display: flex;
-  justify-content: center;
+  @include flex(center, null);
 }
 
 .thumb-img {
@@ -18,13 +21,11 @@
 }
 
 .overlay__descr {
+  @include flex(center, center);
   position: absolute;
   bottom: 0;
   left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 370px;
+  width: 100%;
   height: 70px;
   font-weight: 700;
   font-size: 14px;

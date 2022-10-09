@@ -1,22 +1,48 @@
 .team-section {
   @include section;
   background-color: var(--grey-background-color);
+  @media screen and (min-width: $desktop) {
+    @include section;
+  }
 }
 
 .team__list {
-  display: flex;
-  justify-content: center;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    justify-content: center;
+  }
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .card {
-  @include card-set-item($indent: 30px, $items: 4);
-  /*   width: 270px; */
   background-color: var(--white-color);
   box-shadow: var(--team-card-shadow);
   border-radius: 0px 0px 4px 4px;
+  /*   width: 270px; */
+
+  @media screen and (max-width: ($tablet - 1px)) {
+    &:not(:last-child) {
+      margin-bottom: var(--gap);
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    @include card-set-item(var(--gap), 2);
+  }
+  @media screen and (min-width: $desktop) {
+    @include card-set-item(var(--gap), 4);
+
+    @include card-set-item(30px, 4);
+  }
 }
-.card + .card {
-  margin-left: 30px;
+
+.team__img {
+  margin: 0 auto;
 }
 
 .card-content {
@@ -30,9 +56,11 @@
   line-height: calc(19 / 16);
   text-align: center;
   letter-spacing: 0.03em;
+  font-size: 16px;
 }
 
 .team__job-position {
+  margin-top: 0;
   margin-bottom: 16px;
   color: var(--secondary-color-font);
   font-size: var(--secondary-font-size);

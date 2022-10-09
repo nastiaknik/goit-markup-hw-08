@@ -1,22 +1,36 @@
 .clients {
-  @include section;
+  @include section(60px);
+
+  @media screen and (min-width: $desktop) {
+    @include section(94px);
+  }
 }
 
 .clients__list {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: var(--gap);
+
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+  }
 }
 
 .client__item {
   width: 170px;
   height: 92px;
+
+  @include card-set-item(var(--gap), 1);
+
+  @media screen and (min-width: $tablet) {
+    @include card-set-item(var(--gap), 2);
+  }
 }
 
 .client__link {
   display: flex;
-  align-items: center;
   justify-content: center;
   width: 100%;
   height: 100%;
@@ -33,6 +47,8 @@
 .client__icon {
   fill: var(--grey-icon-color);
   transition: fill var(--animation);
+  @include flex(center, center);
+  height: 92px;
 
   .client__link:hover &,
   .client__link:focus & {

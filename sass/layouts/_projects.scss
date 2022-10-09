@@ -1,5 +1,8 @@
 .projects {
-  @include section;
+  @include section(60px);
+  @media screen and (min-width: $desktop) {
+    @include section(94px);
+  }
 }
 
 .projects__btn {
@@ -15,6 +18,7 @@
   cursor: pointer;
   border-radius: 4px;
   border: none;
+  box-shadow: none;
   transition: background-color var(--animation), color var(--animation),
     box-shadow var(--animation);
 
@@ -30,27 +34,45 @@
 .btn-list {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
-}
-
-.projects__item + .projects__item {
-  margin-left: 8px;
+  flex-wrap: wrap;
+  row-gap: 15px;
+  column-gap: 8px;
+  margin-bottom: 40px;
+  @media screen and (min-width: $tablet) {
+    @include flex(center, center);
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
 }
 
 /* projects card-set */
 
 .card-set {
-  @include card-set(30px);
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap);
+  }
 }
 
 .project__card {
-  @include card-set-item($indent: 30px, $items: 9);
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    margin-bottom: 0px;
+    flex-wrap: wrap;
+    @include card-set-item(var(--gap), 2);
+  }
+  @media screen and (min-width: $desktop) {
+    @include card-set-item(var(--gap), 3);
+  }
 }
 
 .project__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
   transition: box-shadow var(--animation);
-
   &:hover,
   &:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
@@ -59,9 +81,11 @@
 }
 
 .project__content {
-  padding: 20px 24px;
+  flex-grow: 1;
+  padding: 20px;
   border: 1px solid var(--projects-cards-color);
   border-top: 0;
+  max-width: 354px;
 }
 .project__title {
   color: var(--main-color-font);
@@ -69,9 +93,12 @@
   font-size: 18px;
   line-height: calc(36 / 18);
   letter-spacing: 0.06em;
+  margin-top: 0;
+  margin-bottom: 4px;
 }
 .project__type {
-  margin-top: 4px;
+  margin-top: 0;
+  margin-bottom: 0;
   color: var(--secondary-color-font);
   font-size: var(--secondary-font-size);
   line-height: calc(30 / 16);
@@ -96,17 +123,18 @@
   align-items: center;
   transform: translateY(100%);
   transition: transform var(--animation);
-
   .project__link:hover &,
   .project__link:focus & {
     transform: translateY(0);
   }
+  overflow-y: scroll;
 }
-
 .overlay__text {
   font-size: 18px;
   line-height: calc(28 / 18);
   letter-spacing: 0.03em;
   color: var(--white-color);
-  width: 322px;
+  width: 100%;
+  /*   width: 322px;
+ */ /*   padding: 49px 24px; */
 }

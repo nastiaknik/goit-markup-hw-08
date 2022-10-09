@@ -99,6 +99,11 @@
   justify-content: center;
   gap: 10px;
   margin-bottom: 30px;
+  @include font(12px, 400, 1.17, 0.03em);
+  @media screen and (min-width: $desktop) {
+    @include font(14px, 400, 1.71, 0.03em);
+  }
+  height: 15px;
 }
 
 .register-form__descr,
@@ -111,6 +116,11 @@
 .register-form__descr {
   user-select: none;
   color: var(--secondary-color-font);
+  display: block;
+  @include font(12px, 400, 1.17, 0.03em);
+  @media screen and (min-width: $desktop) {
+    @include font(14px, 400, 1.71, 0.03em);
+  }
 }
 
 .register-form__link {
