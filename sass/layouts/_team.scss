@@ -36,9 +36,7 @@
     @include card-set-item(var(--gap), 2);
   }
   @media screen and (min-width: $desktop) {
-    @include card-set-item(var(--gap), 4);
-
-    @include card-set-item(30px, 4);
+    @include card-set-item(var(--gap), 3);
   }
 }
 

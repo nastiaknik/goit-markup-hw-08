@@ -32,7 +32,7 @@
 }
 
 .features__item {
-  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+  @media screen and (min-width: $tablet) {
     @include card-set-item(var(--gap), 2);
     width: 354px;
   }
@@ -42,9 +42,9 @@
       margin-bottom: var(--gap);
     }
   }
-  /*   @media screen and (min-width: $desktop) {
-    @include card-set-item(var(--gap), 4);
-  } */
+  @media screen and (min-width: $desktop) {
+    @include card-set-item(var(--gap), 3);
+  }
 }
 
 .features__icon {
