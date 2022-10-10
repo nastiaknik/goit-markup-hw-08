@@ -1,7 +1,7 @@
 .what-we-do {
   display: none;
   @media screen and (min-width: $desktop) {
-    @include section;
+    @include section(94px);
     padding-top: 0;
     display: block;
   }

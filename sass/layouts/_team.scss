@@ -1,8 +1,9 @@
 .team-section {
-  @include section;
+  @include section(60px);
   background-color: var(--grey-background-color);
+
   @media screen and (min-width: $desktop) {
-    @include section;
+    @include section(94px);
   }
 }
 

@@ -21,7 +21,7 @@
 }
 
 @mixin card-set-item($indent: var(--gap), $items: 3) {
-  flex-basis: calc((100% - $indent * $items - 1) / $items);
+  flex-basis: calc((100% - $indent * ($items - 1)) / $items);
 }
 
 @mixin section($padding: 94px) {

@@ -1,5 +1,5 @@
 .features {
-  @include section;
+  @include section(60px);
 
   @media screen and (min-width: $desktop) {
     @include section(94px);
@@ -19,10 +19,6 @@
 }
 
 .features__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--gap);
-
   @media screen and (min-width: $tablet) {
     display: flex;
     flex-wrap: wrap;
@@ -69,6 +65,9 @@
 }
 
 .features__subtitle {
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;

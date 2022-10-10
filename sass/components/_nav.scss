@@ -1,15 +1,15 @@
 .nav {
+  margin-left: 88px;
   display: none;
   @media screen and (min-width: $tablet) {
     @include flex(null, center);
   }
-}
-.nav__list {
-  display: flex;
-  margin-left: 88px;
   @media screen and (min-width: $desktop) {
     margin-left: 93px;
   }
+}
+.nav__list {
+  display: flex;
 }
 
 .header__list-item {
@@ -17,17 +17,13 @@
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   position: relative;
-  transition: color var(--animation);
-
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
-  }
 }
 
 .main-nav {
+  display: block;
   position: relative;
   padding: 32px 0;
+  transition: color var(--animation);
 
   &::after {
     position: absolute;
@@ -41,6 +37,10 @@
     display: none;
     /*   transition: transform var(--animation)  */
   }
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 .main-nav--current.main-nav::after {
   display: block;
@@ -51,7 +51,6 @@
 
 .nav__contact-list {
   display: none;
-  gap: 30px;
   @media screen and (min-width: $tablet) {
     display: block;
     margin-left: auto;
@@ -61,39 +60,14 @@
     margin-left: auto;
     align-items: center;
     justify-content: center;
+    /*     gap: 30px; */
   }
 }
 .nav__list-item {
   display: flex;
-  min-width: 161px;
-  min-height: 16px;
-  @media screen and (min-width: $tablet) {
-    padding-bottom: 5px;
-    padding-top: 5px;
-  }
-
-  @media screen and (min-width: $desktop) {
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
-}
-.nav__contact-link {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  color: var(--secondary-color-font);
-  font-weight: 500;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.02em;
-  /*   @include section(21px); */
-  transition: color var(--animation);
-
-  &:focus,
-  &:hover {
-    color: var(--accent-color);
-  }
-
+  /*   min-width: 161px;
+  min-height: 16px; */
+  gap: 10px;
   &:not(:last-child) {
     @media screen and (min-width: $tablet) {
       margin-bottom: 10px;
@@ -102,5 +76,38 @@
       margin-right: 30px;
       margin-bottom: 0px;
     }
+  }
+  .nav__contact-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: var(--secondary-color-font);
+    font-weight: 500;
+    line-height: calc(16 / 14);
+    letter-spacing: 0.02em;
+    /*   @include section(21px); */
+    transition: color var(--animation);
+
+    &:focus,
+    &:hover {
+      color: var(--accent-color);
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+  }
+}
+
+.nav__mail {
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    padding-top: 15px;
+  }
+}
+.nav__tel {
+  @media screen and (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+    padding-bottom: 15px;
   }
 }

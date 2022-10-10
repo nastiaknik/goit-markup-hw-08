@@ -19,7 +19,13 @@
 
 .distribution-form__title {
   display: block;
-  @include font(20px, 700, 1.5, 0.03em);
+  /*   margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color); */
 }
 
 .distribution-form__input,

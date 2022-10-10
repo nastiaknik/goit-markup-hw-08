@@ -33,7 +33,6 @@
 
 .btn-list {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   row-gap: 15px;
   column-gap: 8px;
@@ -58,6 +57,10 @@
 }
 
 .project__card {
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
   @media screen and (min-width: $tablet) {
     display: flex;
     margin-bottom: 0px;
@@ -85,7 +88,8 @@
   padding: 20px;
   border: 1px solid var(--projects-cards-color);
   border-top: 0;
-  max-width: 354px;
+  /*   max-width: 354px;
+ */
 }
 .project__title {
   color: var(--main-color-font);
@@ -120,14 +124,18 @@
   padding: 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform var(--animation);
+  overflow-y: scroll;
+
   .project__link:hover &,
   .project__link:focus & {
     transform: translateY(0);
   }
-  overflow-y: scroll;
+
+  @media screen and (min-width: $tablet) {
+    align-items: center;
+  }
 }
 .overlay__text {
   font-size: 18px;

@@ -3,6 +3,7 @@
   background-color: var(--main-color-background);
   text-align: center;
   @media screen and (min-width: $desktop) {
+    @include section(94px);
     text-align: left;
   }
 }
@@ -44,7 +45,7 @@
 .footer-flex {
   @media screen and (min-width: $desktop) {
     display: flex;
-    justify-content: baseline;
+    align-items: baseline;
   }
 }
 .footer-flex--tablet {
@@ -55,22 +56,28 @@
     align-items: baseline;
     padding-right: 89px;
     padding-left: 76px;
+    margin-bottom: 0;
   }
   @media screen and (min-width: $desktop) {
     margin-bottom: 0px;
-    margin-right: 70px;
+    /*     margin-right: 70px;
+ */
+    padding: 0;
   }
 }
 .footer-flex__item {
   /*   @media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
     @include card-set-item(10px, 2);
   } */
+
   &:first-child {
     margin-bottom: 60px;
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 0;
+    }
   }
   &:first-child {
     @media screen and (min-width: $tablet) {
-      margin-bottom: 0px;
       margin-right: 70px;
     }
   }

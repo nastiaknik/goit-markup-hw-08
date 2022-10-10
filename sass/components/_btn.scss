@@ -14,7 +14,7 @@
   cursor: pointer;
   border: none;
   border-radius: 4px;
-  transition: background-color var(--animation);
+  transition: background-color var(--animation) border var(--animation);
 
   &:focus,
   &:hover {
